@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  mariadb:
+    image: mariadb:10.4
+    restart: always
+    ports:
+      - "33309:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=jordy
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=1234
+    command: mysqld --character-set-server=utf8mb4

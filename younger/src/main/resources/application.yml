@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:33309/jordy?autoReconnect=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: user
+    password: 1234
+    driver-class-name: org.mariadb.jdbc.Driver
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
