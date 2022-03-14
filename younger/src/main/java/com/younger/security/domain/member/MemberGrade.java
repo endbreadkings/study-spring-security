@@ -11,7 +11,6 @@ import lombok.Getter;
  * @version 1.0
  */
 public enum MemberGrade {
-  GUEST("예비 죠랭이"),
   JOBLESS("취준 죠랭이"),
   WORKER("사원 죠랭이"),
   EXECUTIVE("임원 죠랭이");

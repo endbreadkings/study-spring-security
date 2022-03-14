@@ -10,7 +10,10 @@
 package com.younger.security.repository;
 
 import com.younger.security.domain.member.Member;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -27,4 +30,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MemberJpaRepository extends JpaRepository<Member, Long> {
 
+  @Query("select m from Member m where m.id = :id and m.grade = :grade")
+  Optional<Member> findByIdAndGrade(@Param("id") Long id, @Param("grade") String grade);
 }
