@@ -1,5 +1,7 @@
 package kr.co.haedoang.demo.jwt;
 
+import org.springframework.stereotype.Component;
+
 /**
  * packageName : kr.co.haedoang.demo.jwt
  * fileName : UsernameAndPasswordAuthenticationRequest
@@ -7,6 +9,7 @@ package kr.co.haedoang.demo.jwt;
  * date : 2022-02-16
  * description :
  */
+
 public class UsernameAndPasswordAuthenticationRequest {
     private String username;
     private String password;
